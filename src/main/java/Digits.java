@@ -7,16 +7,13 @@ public class Digits
 
 	public Digits(int num)
 	{ 
-		int save = num;
-		int count = 0;
-		while(num > 10){
-		 	num = num % 10;
-			count++;
+		if(num == 0){
+			digitList.add(0);
 		}
-		count++;
-		for(int i = 0; i < count; i++){
-			digitList.add(save % 10);
-			save = save/10;
+		int count = num;
+		while(count > 0){
+		 	digitList.add(count % 10)
+			count = count / 10;
 		}
 	}
 

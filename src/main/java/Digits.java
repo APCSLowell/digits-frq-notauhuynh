@@ -10,7 +10,7 @@ public class Digits
 		int save = num;
 		int count = 0;
 		while(num > 10){
-		 	num % 10;
+		 	num = num % 10;
 			count++;
 		}
 		count++;

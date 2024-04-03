@@ -7,9 +7,16 @@ public class Digits
 
 	public Digits(int num)
 	{ 
-		while(num > 0){
-		digitList.add(0, num % 10);
-		num = num/10;
+		int save = num;
+		int count = 0;
+		while(num > 10){
+		 	num % 10;
+			count++;
+		}
+		count++;
+		for(int i = 0; i < count; i++){
+			digitList.add(save % 10);
+			save = save/10;
 		}
 	}
 
